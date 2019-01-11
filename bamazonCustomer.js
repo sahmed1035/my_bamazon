@@ -33,13 +33,12 @@ var itemsAvailable = function afterConnection() {
   connection.query("SELECT * FROM products", function (err, res) {
     if (err) throw err;
     for (var i = 0; i < res.length; i++) {
-      var results = (res[i].item_id + " || " + res[i].product_name + " || " +
+      (res[i].item_id + " || " + res[i].product_name + " || " +
         res[i].department_name + " || " + res[i].price + " || " + res[i].stock_quantity + "\n");
 
-      //results of the sql select statement
-      console.table(results);
     }
-
+    //results of the sql select statement
+    console.table(res);
     //asking customer the item and quantity using inquirer
     askCustomer(res);
 
