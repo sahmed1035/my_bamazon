@@ -28,7 +28,7 @@ connection.connect(function (err) {
   console.log("===========================================================");
   itemsAvailable();
 });
-// creating a maketable function to display all the data from the table
+// creating an itemAvailble function to display all the data from the table
 var itemsAvailable = function afterConnection() {
   connection.query("SELECT * FROM products", function (err, res) {
     if (err) throw err;
