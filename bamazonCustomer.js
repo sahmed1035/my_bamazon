@@ -44,6 +44,7 @@ var itemsAvailable = function afterConnection() {
 
   });
 }
+var totalCost = 0;
 
 var askCustomer = function (res) {
   inquirer.prompt([{
@@ -76,7 +77,8 @@ var askCustomer = function (res) {
               "' WHERE product_name='" + product + "'",
               function (err, res2) {
                 console.log("Product pruchased successfully!");
-                //console.log("Would you like to buy more items?")
+                totalCost = (answer.quant) *(res[id].price);
+                console.log("You Paid: " + totalCost);
                 buyMore();
               }
             );

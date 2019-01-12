@@ -4,7 +4,7 @@ my_bamazon
 MySQL (week 12 assignment) 
 
 ## Project Description
-link to the video:
+link to the video: 'https://drive.google.com/file/d/11HyHoZGI7l3W06Y1B_UHEEGBxE6aCuE0/view'
 This is an Amazon-like storefront. It is command line application where a user can choose an item to buy. 
 The database is updated reflecting the purchase. 
 
